@@ -6,7 +6,6 @@ class Solution {
         for(int i=0; i<s.length(); i++){
             answer += s.charAt(i) - '0';
         }
-        
         return answer;
     }
 }
