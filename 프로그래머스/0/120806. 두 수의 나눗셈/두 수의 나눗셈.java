@@ -1,7 +1,9 @@
-public class Solution {
+class Solution {
     public int solution(int num1, int num2) {
-        double result = (double) num1 / num2;   // 나눈 결과를 실수로 계산
-        result *= 1000;                         // 1000을 곱함
-        return (int) result;                    // 정수 부분만 반환
+        int answer = 0;
+        double a = (double)num1 / num2;
+        a *= 1000;
+        answer = (int) a;
+        return answer;
     }
 }
