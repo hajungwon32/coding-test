@@ -13,12 +13,12 @@ function solution(board, moves) {
     for(let i of moves) { // 열
         for(let j in board) { //행
             if(board[j][i-1] !== 0) {
-                let temp = stack.pop();
-                if(temp === board[j][i-1]) {
+                let temp = board[j][i-1];
+                if(temp === stack[stack.length-1]) {
                     answer += 2;
+                    stack.pop()
                 } else {
                     stack.push(temp);
-                    stack.push(board[j][i-1]);
                 }
                 board[j][i-1] = 0;
                 break;
